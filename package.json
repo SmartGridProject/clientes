@@ -1,0 +1,25 @@
+{
+  "name": "clientes",
+  "version": "0.0.1",
+  "description": "Serial port client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtualweblab/clientes.git"
+  },
+  "keywords": [
+    "serial",
+    "port",
+    "nw",
+    "arduino"
+  ],
+  "author": "Mauricio Duque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virtualweblab/clientes/issues"
+  },
+  "homepage": "https://github.com/virtualweblab/clientes#readme"
+}
