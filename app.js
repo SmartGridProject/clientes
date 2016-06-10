@@ -7,10 +7,10 @@ var serverLC = require('./serverLocal')
 var serial = require('./puertoserial')
 var normalizeChain = require('./normalizer_chains')
 
-ip.address_ip = '172.30.254.34'
-ip.port = '8080'
-ip.protocol = 'http'
-ip.address = ip.protocol + '://' + ip.address_ip + ':' + ip.port
+// ip.address_ip = '172.30.254.34'
+// ip.port = '8080'
+// ip.protocol = 'http'
+// ip.address = ip.protocol + '://' + ip.address_ip + ':' + ip.port
 
 var server_remoteIO = serverIO(ip)
 var server_local = serverLC(ipL)
