@@ -13,11 +13,27 @@ var normalizeChain = require('./normalizer_chains')
 // ip.address = ip.protocol + '://' + ip.address_ip + ':' + ip.port
 
 var server_remoteIO = serverIO(ip)
-var server_local = serverLC(ipL)
 
+var server_local = new serverLC(ipL)
 var serial_Arduino = new serial()
+
 serial_Arduino.on('data',function(data){
-  console.log(normalizeChain(data));
+  //console.log(data);
+  if (process.argv[2] == 'Arduino' || process.argv[2] == 'arduino') {
+    console.log(normalizeChain(data));
+    server_remoteIO.emit('OMG',{dataADQ:normalizeChain(data)})
+  }else{
+    console.error('No se determina dispositivo');
+  }
+})
+
+server_local.on('data', function(data){
+  if (process.argv[2] == 'PLC' || process.argv[2] == 'plc'){
+    server_remoteIO.emit('OMG',{dataADQ:normalizeChain(data)})
+  }else {
+    console.error('No se determina dispositivo');
+  }
+
 })
 
 
