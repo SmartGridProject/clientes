@@ -1,7 +1,7 @@
 var io = require('socket.io-client')
-var ip = require('ip') 
-ip = 'http://' + ip.address() + ':' + '8080'
-
+var ip = require('ip')
+//ip = 'http://' + ip.address() + ':' + '8080'
+ip = 'http://' + ip.address() + ':' + '8000'
 module.exports = function(http){
 
   var address = http.address || ip

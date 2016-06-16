@@ -4,7 +4,7 @@ module.exports = function(data){
   var datasend = data + '/'
   datasend = datasend.substring(datasend.indexOf('{')+1, datasend.indexOf('&'))
   var entradas = datasend.substring(datasend.indexOf('I'),datasend.indexOf('}')).split(',')
-  var salidas = datasend.substring(datasend.search('S') + 3, datasend.search('},IA')).split(',')
+  var salidas = datasend.substring(datasend.search('S:{') + 3, datasend.search('},IA')).split(',')
   var analogas = datasend.substring(datasend.search('IA1'), datasend.search('}}')).split(',')
 
   var arrE = []
