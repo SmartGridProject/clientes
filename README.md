@@ -19,6 +19,10 @@ Este programa permite al cliente conectar su dispositivo de adquisición de dato
     * [Ubuntu Linux](#ubuntu-linux)
   * [Usando Electron](#usando-electron)
   * [Directo con NodeJS](#directo-con-nodejs)
+  * [Ejemplo](#ejemplo)
+    * [Ejemplo Con Arduino](#ejemplo-con-arduino)
+    * [Ejemplo Con PLC](#ejemplo-con-plc)
+    * [Trama](#trama)
 * [Aclaraciones](#aclaraciones)
 
 ***
@@ -36,16 +40,57 @@ Este programa permite al cliente conectar su dispositivo de adquisición de dato
 ## Plataformas
 
 #### Windows
-#### Mac OS X
-#### Ubuntu Linux
 
+```
+# Win
+# Proyecto VWL Modo Cliente
+  git clone https://github.com/virtualweblab/clientes.git
+# Instalacion de paquetes
+  npm install
+```
+
+#### Mac OS X
+```
+# Mac
+# Proyecto VWL Modo Servidor
+  git clone https://github.com/virtualweblab/clientes.git
+# Instalacion de paquetes
+  npm install
+```
+#### Ubuntu Linux
+```
+# Ubuntu
+# Proyecto VWL Modo Servidor
+  git clone https://github.com/virtualweblab/clientes.git
+# Instalacion de paquetes
+  npm install
+```
 ## uso
 
 #### Descargas
 
 #### Compilar
 
+Para descargar la aplicacion y compilar segun sea su sistema operativo
+
 ##### Windows
+
+64 Bits
+```
+electron-packager . vwl --platform=win32 --arch=x64
+```
+32 Bits
+```
+electron-packager . vwl --platform=win32 --arch=x32
+```
+##### Mac OS X
+```
+electron-packager . vwl --platform=darwin --arch=x64
+```
+##### Ubuntu Linux
+```
+electron-packager . vwl --platform=darwin --arch=x64
+```
 
 #### Usando Electron
 ```
@@ -57,17 +102,21 @@ npm start
 # Arrancar aplicación
 node serial.js [-- shield]
 ```
-Ejemplo:
+
+#### Ejemplo Con Arduino
 
 Para Arduino
 ```
 node app.js 'arduino'
 ```
+#### Ejemplo Con PLC
 Para PLC
 ```
 node app.js 'plc'
 ```
-Trama:
+
+#### Trama
+
 ```
 {
   E:{           // Estado de las entradas digitales [estados binarios]
