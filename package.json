@@ -4,7 +4,8 @@
   "description": "Serial port client",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron main.js",
+    "build": "electron-packager . vwl --platform=win32 --arch=x64 "
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/virtualweblab/clientes/issues"
   },
-  "homepage": "https://github.com/virtualweblab/clientes#readme"
+  "homepage": "https://github.com/virtualweblab/clientes#readme",
+  "devDependencies": {
+    "electron-packager": "^7.0.4",
+    "electron-prebuilt": "^1.2.4"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
