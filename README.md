@@ -37,6 +37,10 @@ Este programa permite al cliente conectar su dispositivo de adquisición de dato
 
 {Placa} -> [Serial] -> (PC) -> [Socket] -> (Servidor VWL)
 
+Alternativa
+
+{PLC} -> [Socket] -> (Servidor VWL)
+
 ## Plataformas
 
 #### Windows
@@ -52,7 +56,7 @@ Este programa permite al cliente conectar su dispositivo de adquisición de dato
 #### Mac OS X
 ```
 # Mac
-# Proyecto VWL Modo Servidor
+# Proyecto VWL Modo Cliente
   git clone https://github.com/virtualweblab/clientes.git
 # Instalacion de paquetes
   npm install
@@ -60,7 +64,7 @@ Este programa permite al cliente conectar su dispositivo de adquisición de dato
 #### Ubuntu Linux
 ```
 # Ubuntu
-# Proyecto VWL Modo Servidor
+# Proyecto VWL Modo Cliente
   git clone https://github.com/virtualweblab/clientes.git
 # Instalacion de paquetes
   npm install
