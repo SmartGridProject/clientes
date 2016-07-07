@@ -1,0 +1,6 @@
+{
+  "name": "Clientes",
+  "tagline": "",
+  "body": "### Bienvenido a Clientes de VirtualWebLab.\r\nDescarga el archivo, solo tienes que seguir las instrucciones que aparecen en el repositorio y disfruta.\r\n\r\n### Para Conectarte con Arduino o con PLC.\r\nDebes pedir por correo al administrador del proyecto que te asigne un KEY que permite conectar tus dispositivos a la plataforma.\r\n\r\n### Autores y contribución\r\nEspecial agradecimientos por contribución a:\r\n- CEDIA.\r\n- EPN.\r\n- UPS.\r\n- ESPOCH.\r\n\r\nAutores: \r\n- Mauricio Duque.\r\n- Álvaro Aguinaga.\r\n- Fredy Llulluna.\r\n- Nelson Jara.\r\n- Telmo Moreno.\r\n\r\n### Soporte y contactos\r\nPara cualquier error por favor consultar o informar a: [Issues] https://github.com/virtualweblab/users/issues,\r\nSoporte [Ingeniero Mauricio Duque] mauricio.duque.eje@gmail.com\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
