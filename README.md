@@ -104,19 +104,19 @@ npm start
 
 ```
 # Arrancar aplicación
-node serial.js [-- shield]
+node serial.js [-- shield] [--socket]
 ```
 
 #### Ejemplo Con Arduino
 
 Para Arduino
 ```
-node app.js 'arduino'
+node app.js 'arduino' 'SOCKET_1'
 ```
 #### Ejemplo Con PLC
 Para PLC
 ```
-node app.js 'plc'
+node app.js 'plc' 'SOCKET_2'
 ```
 
 #### Trama

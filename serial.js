@@ -9,7 +9,7 @@ var normalizeChain = require('./normalizer_chains')
 
 // set the ip
 
-ip.address_ip = 
+ip.address_ip = '190.15.141.74'
 ip.port = '8000'
 ip.protocol = 'http'
 ip.address = ip.protocol + '://' + ip.address_ip + ':' + ip.port
@@ -20,10 +20,15 @@ var server_local = new serverLC(ipL)
 var serial_Arduino = new serial()
 
 serial_Arduino.on('data',function(data){
-  //console.log(data);
+  console.log(data);
   if (process.argv[2] == 'Arduino' || process.argv[2] == 'arduino') {
-    console.log(normalizeChain(data));
-    server_remoteIO.emit('OMG',{dataADQ:normalizeChain(data)})
+    //console.log(normalizeChain(data));
+    //console.log(process.argv[3]);
+     //server_remoteIO.emit('OMG',{dataADQ:normalizeChain(data)}) // For first lab
+    server_remoteIO.emit(process.argv[3],{dataADQ:normalizeChain(data)})
+    server_remoteIO.on('news', (data)=>{
+      console.log(data);
+    })
   }else{
     console.error('No se determina dispositivo');
   }
@@ -32,7 +37,7 @@ serial_Arduino.on('data',function(data){
 server_local.on('data', function(data){
   if (process.argv[2] == 'PLC' || process.argv[2] == 'plc'){
     data.on('data',function(data){
-      server_remoteIO.emit('OMG',{dataADQ:normalizeChain(data)})
+      server_remoteIO.emit(process.argv[3],{dataADQ:normalizeChain(data)})
     })
   }else {
     console.error('No se determina dispositivo');

@@ -44,10 +44,8 @@ var serial_port = function(){
   function serialSocket(done){
     if(portArduino != null){
         serialPort.on('data', function(data){
-          //io.emit('serialCom', data)
-          //console.log(data);
-          //console.log(normalizeChain(data));
           data_serial.emit('data',data)
+          serialPort.write('hi')
         })
     }
     done()
