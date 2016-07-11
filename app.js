@@ -6,7 +6,7 @@ var app = express();
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/plc', function(req, res) {
   const pross = spawn('node',['serial.js','arduino'])
-  
+
   pross.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
       res.send('hello world');
